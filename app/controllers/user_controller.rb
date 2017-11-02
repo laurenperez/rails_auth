@@ -8,6 +8,10 @@ def index
     redirect_to root_path
   end
 
+  def new
+    @user = User.new
+  end
+
   def edit
     @user = User.find(params[:id])
   end
@@ -18,18 +22,15 @@ def index
     redirect_to root_path
   end
 
-  def new
-    @user = User.new
+  def show
+    @user = User.find(params[:id])
   end
 
   def destroy
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
-
   def user_params
    params.require(:user).permit(:email, :password)
   end
+
 end

@@ -1,0 +1,14 @@
+<h1>Pets#edit</h1>
+<p>Find me in app/views/pets/edit.html.erb</p>
+
+<h1>Edit This Pet</h1>
+
+<%= form_for @pet do |p| %>
+
+  <p>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+  </p>
+
+  <%= p.submit %>
+<% end %>
